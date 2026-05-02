@@ -1,142 +1,118 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#0f1115",
-        color: "#f4f4f5",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <section style={{ maxWidth: "1050px", margin: "0 auto", padding: "72px 28px" }}>
-        <p style={{ color: "#9ca3af", letterSpacing: "2px", fontSize: "13px", marginBottom: "18px" }}>
+    <main className="min-h-screen bg-[#0f1115] text-[#f4f4f5] font-sans">
+      <nav className="border-b border-[#1f2937]">
+        <div className="max-w-[1050px] mx-auto px-7 py-5 flex justify-between items-center">
+          <Link href="/" className="font-semibold">Dmitry Savenkov</Link>
+          <div className="flex gap-6 text-sm text-gray-300">
+            <Link href="/">Home</Link>
+            <Link href="/portfolio">Portfolio</Link>
+            <a href="mailto:dmytro.savenkov@gmail.com">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <section className="max-w-[1050px] mx-auto px-7 py-20">
+        <p className="text-gray-400 tracking-[2px] text-sm mb-5">
           AI SOLUTION ARCHITECT · FRACTIONAL / ADVISORY
         </p>
 
-        <h1 style={{ fontSize: "52px", lineHeight: "1.05", marginBottom: "20px" }}>
+        <h1 className="text-5xl md:text-6xl leading-tight mb-6">
           Dmitry Savenkov
         </h1>
 
-        <h2 style={{ fontSize: "24px", color: "#d1d5db", fontWeight: 400, marginBottom: "28px" }}>
+        <h2 className="text-2xl text-gray-300 font-normal mb-8 max-w-3xl">
           I help teams move AI from prototype to production.
         </h2>
 
-        <p style={{ maxWidth: "760px", lineHeight: "1.7", color: "#cbd5e1", fontSize: "18px" }}>
+        <p className="max-w-3xl leading-8 text-gray-300 text-lg mb-5">
           AI Solution Architect with 20+ years in software engineering, architecture,
           and technical leadership. I design practical AI systems around LLMs, RAG,
           agentic workflows, AI in SDLC, cloud platforms, and data-heavy enterprise systems.
         </p>
 
-        <p style={{ maxWidth: "760px", lineHeight: "1.7", color: "#cbd5e1", fontSize: "18px" }}>
+        <p className="max-w-3xl leading-8 text-gray-300 text-lg">
           I usually work where teams already have ideas, PoCs, or partially working AI tools,
           but need proper architecture, evaluation, reliability, and a clear path to production.
         </p>
 
-        <div style={{ display: "flex", gap: "14px", marginTop: "34px", flexWrap: "wrap" }}>
+        <div className="flex gap-4 mt-10 flex-wrap">
           <a
             href="mailto:dmytro.savenkov@gmail.com"
-            style={{
-              padding: "12px 20px",
-              background: "#f4f4f5",
-              color: "#111827",
-              borderRadius: "10px",
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
+            className="px-5 py-3 bg-white text-gray-900 rounded-xl font-semibold"
           >
-            Contact me
+            Book a quick call
           </a>
+
+          <Link
+            href="/portfolio"
+            className="px-5 py-3 border border-gray-700 rounded-xl font-semibold"
+          >
+            View portfolio
+          </Link>
 
           <a
             href="https://www.linkedin.com/in/dmitrysavenkov777/"
             target="_blank"
-            style={{
-              padding: "12px 20px",
-              border: "1px solid #374151",
-              color: "#f4f4f5",
-              borderRadius: "10px",
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
+            className="px-5 py-3 border border-gray-700 rounded-xl font-semibold"
           >
             LinkedIn
           </a>
         </div>
+
+        <p className="text-gray-400 mt-5">
+          Available for selected part-time / advisory engagements, typically 10–20h/week.
+        </p>
       </section>
 
-      <section style={{ borderTop: "1px solid #1f2937", padding: "56px 28px" }}>
-        <div style={{ maxWidth: "1050px", margin: "0 auto" }}>
-          <h3 style={{ fontSize: "26px", marginBottom: "24px" }}>What I do</h3>
+      <section className="border-t border-[#1f2937] px-7 py-14">
+        <div className="max-w-[1050px] mx-auto">
+          <h3 className="text-3xl mb-7">Who I help</h3>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-              gap: "18px",
-            }}
-          >
+          <div className="grid md:grid-cols-2 gap-5">
             {[
-              {
-                title: "AI in SDLC",
-                text: "AI-assisted development, coding agents, engineering productivity, prompt standards, and adoption playbooks.",
-              },
-              {
-                title: "RAG & Knowledge Systems",
-                text: "Document ingestion, embeddings, retrieval, reranking, evaluation, and production-ready knowledge assistants.",
-              },
-              {
-                title: "Agentic Workflows",
-                text: "LangGraph-style orchestration, tool use, multi-step reasoning, workflow automation, and reliability patterns.",
-              },
-              {
-                title: "Cloud AI Architecture",
-                text: "Azure, AWS, Bedrock, OpenAI, data pipelines, observability, cost control, and secure production deployment.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{
-                  background: "#151821",
-                  border: "1px solid #252b37",
-                  borderRadius: "16px",
-                  padding: "22px",
-                }}
-              >
-                <h4 style={{ fontSize: "18px", marginBottom: "10px" }}>{item.title}</h4>
-                <p style={{ color: "#aeb7c4", lineHeight: "1.6", margin: 0 }}>{item.text}</p>
+              "Teams with AI PoCs that do not scale",
+              "Companies moving from AI demos to production systems",
+              "Engineering teams adopting LLMs, copilots, or coding agents",
+              "Organizations building RAG, agentic workflows, or AI in SDLC platforms",
+            ].map((text) => (
+              <div key={text} className="bg-[#151821] border border-[#252b37] rounded-2xl p-6 text-gray-300">
+                {text}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ borderTop: "1px solid #1f2937", padding: "56px 28px" }}>
-        <div style={{ maxWidth: "1050px", margin: "0 auto" }}>
-          <h3 style={{ fontSize: "26px", marginBottom: "20px" }}>Selected experience</h3>
+      <section className="border-t border-[#1f2937] px-7 py-14">
+        <div className="max-w-[1050px] mx-auto">
+          <h3 className="text-3xl mb-7">What I do</h3>
 
-          <ul style={{ color: "#cbd5e1", lineHeight: "1.8", fontSize: "17px", paddingLeft: "20px" }}>
-            <li>Designed RAG and AI assistant systems for enterprise knowledge and structured data access.</li>
-            <li>Worked on AI in SDLC initiatives covering requirements, code review, test generation, and developer productivity.</li>
-            <li>Built AI and graph-based analytics systems for blockchain intelligence and fraud detection.</li>
-            <li>Designed Azure and AWS-based data and AI platforms with focus on scalability, security, and production readiness.</li>
-            <li>Supported pre-sales, discovery, architecture reviews, and technical decision-making with client stakeholders.</li>
-          </ul>
+          <div className="grid md:grid-cols-4 gap-5">
+            {[
+              ["AI in SDLC", "Coding agents, requirements analysis, code review, testing, documentation, adoption playbooks."],
+              ["RAG Systems", "Document ingestion, embeddings, retrieval, reranking, evaluation, and knowledge assistants."],
+              ["Agentic Workflows", "LangGraph-style orchestration, tool use, multi-step reasoning, and reliability patterns."],
+              ["Cloud AI Architecture", "Azure, AWS, Bedrock, OpenAI, data pipelines, observability, and secure deployment."],
+            ].map(([title, text]) => (
+              <div key={title} className="bg-[#151821] border border-[#252b37] rounded-2xl p-6">
+                <h4 className="text-lg mb-3">{title}</h4>
+                <p className="text-gray-400 leading-7">{text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section style={{ borderTop: "1px solid #1f2937", padding: "56px 28px" }}>
-        <div style={{ maxWidth: "1050px", margin: "0 auto" }}>
-          <h3 style={{ fontSize: "26px", marginBottom: "20px" }}>Engagement model</h3>
-
-          <p style={{ maxWidth: "760px", color: "#cbd5e1", lineHeight: "1.7", fontSize: "17px" }}>
-            I am open to selected part-time, advisory, and contract engagements,
-            especially where senior architecture input is needed for GenAI, RAG,
-            agentic systems, AI in SDLC, or cloud-based AI platforms.
-          </p>
-
-          <p style={{ color: "#f4f4f5", fontWeight: 600, marginTop: "18px" }}>
-            Typical format: advisory, architecture review, technical discovery, PoC-to-MVP guidance,
-            or 10–20 hours/week fractional involvement.
+      <section className="border-t border-[#1f2937] px-7 py-14">
+        <div className="max-w-[1050px] mx-auto">
+          <h3 className="text-3xl mb-5">Engagement model</h3>
+          <p className="max-w-3xl text-gray-300 leading-8 text-lg">
+            Advisory, architecture review, technical discovery, PoC-to-MVP guidance,
+            or fractional architecture involvement for GenAI, RAG, agentic systems,
+            AI in SDLC, and cloud-based AI platforms.
           </p>
         </div>
       </section>
