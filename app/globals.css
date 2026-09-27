@@ -15,3 +15,7 @@ a:hover { opacity: .82; }
 .button-primary { display: inline-block; padding: .75rem 1.25rem; background: #fff; color: #111827; border-radius: .75rem; font-weight: 600; }
 .button-secondary { display: inline-block; padding: .75rem 1.25rem; border: 1px solid #374151; border-radius: .75rem; font-weight: 600; }
 .label { color: #9ca3af; letter-spacing: 2px; font-size: .75rem; text-transform: uppercase; margin-bottom: .75rem; }
+.form-label { display: flex; flex-direction: column; gap: .55rem; color: #d1d5db; font-size: .875rem; font-weight: 600; }
+.form-input { width: 100%; border: 1px solid #374151; background: #0f1115; color: #f4f4f5; border-radius: .75rem; padding: .8rem .9rem; outline: none; font: inherit; }
+.form-input:focus { border-color: #9ca3af; }
+.form-input::placeholder { color: #6b7280; }

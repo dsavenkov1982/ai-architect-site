@@ -20,7 +20,7 @@ export default function Home() {
         <div className="flex gap-4 mt-10 flex-wrap">
           <Link href="/services" className="button-primary">See how I can help</Link>
           <Link href="/portfolio" className="button-secondary">View selected work</Link>
-          <a href="mailto:dmytro.savenkov@gmail.com" className="button-secondary">Discuss a project</a>
+          <Link href="/contact" className="button-secondary">Discuss a project</Link>
         </div>
         <p className="text-gray-400 mt-5">Available for selected architecture reviews, advisory work, and fractional engagements.</p>
       </section>

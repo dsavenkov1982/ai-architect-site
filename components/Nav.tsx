@@ -9,7 +9,7 @@ export default function Nav() {
           <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
           <Link href="/portfolio">Portfolio</Link>
-          <a href="mailto:dmytro.savenkov@gmail.com">Contact</a>
+          <Link href="/contact">Contact</Link>
         </div>
       </div>
     </nav>
