@@ -22,9 +22,11 @@ export default function Home() {
           <Link href="/portfolio" className="button-secondary">View selected work</Link>
           <Link href="/contact" className="button-secondary">Discuss a project</Link>
         </div>
-        <p className="text-gray-400 mt-5">Available for selected architecture reviews, advisory work, and fractional engagements.</p>
+        <p className="text-gray-400 mt-5">Available for selected architecture reviews, advisory work, and fractional engagements from December 2026.</p>
+        <div className="hero-signals mt-10"><span>20+ years in architecture</span><span>Enterprise GenAI & RAG</span><span>Regulated environments</span><span>LLM fine-tuning</span></div>
       </section>
 
+      <section className="section feature-section"><div className="content"><p className="eyebrow">RECENT WORK</p><h2 className="section-title">From model adaptation to controlled enterprise delivery.</h2><div className="grid md:grid-cols-2 gap-5 mt-8"><Link href="/portfolio" className="card feature-card"><span className="feature-number">01 / MODEL ADAPTATION</span><h3 className="text-2xl mt-5 mb-3">Llama + LoRA for Cypher</h3><p className="text-gray-400 leading-7">Fine-tuning a language model to translate natural-language blockchain questions into graph queries.</p><span className="feature-link">Explore case study ↗</span></Link><Link href="/portfolio" className="card feature-card"><span className="feature-number">02 / REGULATED AI</span><h3 className="text-2xl mt-5 mb-3">AI-assisted SDLC, with controls</h3><p className="text-gray-400 leading-7">Architecture for assisted engineering workflows with traceability, evaluation, approvals, and human oversight.</p><span className="feature-link">Explore case study ↗</span></Link></div></div></section>
       <section className="section">
         <div className="content">
           <p className="eyebrow">WHERE I ADD VALUE</p>

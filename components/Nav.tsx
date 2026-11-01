@@ -10,6 +10,7 @@ export default function Nav() {
           <Link href="/services">Services</Link>
           <Link href="/portfolio">Portfolio</Link>
           <Link href="/contact">Contact</Link>
+          <a href="https://www.linkedin.com/in/dmitrysavenkov777/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn ↗</a>
         </div>
       </div>
     </nav>

@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Nav from "@/components/Nav";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -24,7 +25,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main>
+    <main><Nav />
       <section className="px-7 py-20 md:py-28">
         <div className="content max-w-[760px]">
           <p className="eyebrow">CONTACT</p>
@@ -60,7 +61,7 @@ export default function ContactPage() {
 
           <div className="mt-8 text-gray-400 leading-8">
             <p>Prefer email? <a className="text-gray-200 underline underline-offset-4" href="mailto:dmytro.savenkov@gmail.com">dmytro.savenkov@gmail.com</a></p>
-            <p><a className="text-gray-200 underline underline-offset-4" href="https://www.linkedin.com/in/dmytro-savenkov/" target="_blank" rel="noreferrer">LinkedIn</a></p>
+            <p><a className="text-gray-200 underline underline-offset-4" href="https://www.linkedin.com/in/dmitrysavenkov777/" target="_blank" rel="noreferrer">LinkedIn</a></p>
           </div>
         </div>
       </section>
